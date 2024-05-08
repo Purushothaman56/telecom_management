@@ -28,6 +28,11 @@ Desktop.ini                 # Windows system file
 *.py~, *.old                # Temporary or backup Python files
 
 # Flask-specific ignores
-instance/                   # Flask instance folder
-telecom.db                  # SQLite database (ignore if storing in repo isn't desired)
-migrations/                 # Flask-Migrate migration files (usually included, but may want to ignore in certain cases)
+backend/.coverage
+backend/.venv/
+backend/__pycache__/
+backend/migrations/
+backend/telecom.db
+backend/instance
+backend/.pytest_cache
+
