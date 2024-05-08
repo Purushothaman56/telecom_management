@@ -26,6 +26,7 @@ Desktop.ini                 # Windows system file
 *.bak                       # Backup files
 *.orig                      # Original files created by patches
 *.py~, *.old                # Temporary or backup Python files
+*.pyc
 
 # Flask-specific ignores
 backend/.coverage
@@ -35,4 +36,5 @@ backend/migrations/
 backend/telecom.db
 backend/instance
 backend/.pytest_cache
+backend/app/__pycache__
 

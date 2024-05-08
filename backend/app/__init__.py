@@ -6,6 +6,7 @@ from flask_migrate import Migrate  # Import Flask-Migrate
 db = SQLAlchemy()
 migrate = None  # Placeholder for Flask-Migrate instance
 
+
 def create_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../telecom.db'
@@ -17,7 +18,6 @@ def create_app():
     migrate = Migrate(app, db)
 
     with app.app_context():
-        from .models import Customer, Plan, Renewal
         from .routes import bp
         db.create_all()  # Create the tables if they don't exist
         app.register_blueprint(bp)

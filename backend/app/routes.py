@@ -6,6 +6,7 @@ from datetime import datetime
 
 bp = Blueprint('main', __name__)
 
+
 # Register new customer
 @bp.route('/customers', methods=['POST'])
 def create_customer():
@@ -31,6 +32,7 @@ def create_customer():
 
     return jsonify({"message": "Customer created successfully"}), 201
 
+
 # Get all customers
 @bp.route('/customers', methods=['GET'])
 def get_customers():
@@ -50,6 +52,7 @@ def get_customers():
     ]
     return jsonify(customer_list), 200
 
+
 # Update customer information
 @bp.route('/customers/<int:customer_id>', methods=['PUT'])
 def update_customer(customer_id):
@@ -64,6 +67,7 @@ def update_customer(customer_id):
 
     return jsonify({"message": "Customer updated successfully"}), 200
 
+
 # Delete a customer
 @bp.route('/customers/<int:customer_id>', methods=['DELETE'])
 def delete_customer(customer_id):
@@ -73,6 +77,7 @@ def delete_customer(customer_id):
     db.session.commit()
 
     return jsonify({"message": "Customer deleted successfully"}), 200
+
 
 # Get all plans
 @bp.route('/plans', methods=['GET'])
@@ -88,6 +93,7 @@ def get_plans():
         for p in plans
     ]
     return jsonify(plan_list), 200
+
 
 # Create a new plan
 @bp.route('/plans', methods=['POST'])
@@ -107,6 +113,7 @@ def create_plan():
     db.session.commit()
 
     return jsonify({"message": "Plan created successfully"}), 201
+
 
 # Create a new renewal record
 @bp.route('/renewals', methods=['POST'])

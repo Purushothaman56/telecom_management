@@ -2,6 +2,7 @@
 from datetime import datetime
 from . import db
 
+
 class Customer(db.Model):
     __tablename__ = 'customers'
     customer_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -13,12 +14,14 @@ class Customer(db.Model):
     registration_date = db.Column(db.DateTime, default=datetime.utcnow)
     current_plan_id = db.Column(db.Integer, db.ForeignKey('plans.plan_id'), nullable=True)
 
+
 class Plan(db.Model):
     __tablename__ = 'plans'
     plan_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     plan_name = db.Column(db.String(50), unique=True, nullable=False)
     plan_cost = db.Column(db.Float, nullable=False)
     validity_days = db.Column(db.Integer, nullable=False)
+
 
 class Renewal(db.Model):
     __tablename__ = 'renewals'
