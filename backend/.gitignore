@@ -1,0 +1,33 @@
+# General Python ignores
+__pycache__/                # Python bytecode caches
+*.py[cod]                   # Compiled Python files
+*.pyo                       # Compiled files
+*.pyd                       # Python dynamic libraries
+*.so                        # Shared object files
+
+# Virtual environment ignores
+venv/                       # Virtual environment folder
+.env                        # Environment variable files
+.DS_Store                   # macOS-specific file
+.idea/                      # JetBrains/IDEA project files
+.vscode/                    # Visual Studio Code settings
+.coverage                   # Pytest coverage config
+
+
+# Operating system-specific ignores
+Thumbs.db                   # Windows thumbnail cache
+ehthumbs.db                 # Windows thumbnail cache
+Desktop.ini                 # Windows system file
+
+# Logs and temporary files
+*.log                       # Log files
+*.tmp                       # Temporary files
+*.swp                       # vi/vim swap files
+*.bak                       # Backup files
+*.orig                      # Original files created by patches
+*.py~, *.old                # Temporary or backup Python files
+
+# Flask-specific ignores
+instance/                   # Flask instance folder
+telecom.db                  # SQLite database (ignore if storing in repo isn't desired)
+migrations/                 # Flask-Migrate migration files (usually included, but may want to ignore in certain cases)
