@@ -36,5 +36,6 @@ backend/migrations/
 backend/telecom.db
 backend/instance
 backend/.pytest_cache
-backend/app/__pycache__
+backend/app/__pycache__/*
+backend/tests/__pycache__/*
 
