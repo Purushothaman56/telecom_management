@@ -1,5 +1,4 @@
-```markdown
-# Telecom Customer Management System (TCMS)
+## Telecom Customer Management System (TCMS)
 
 This project is a web-based application to manage and track telecom mobility customers. It includes functionalities for registering new customers, assigning plans, renewing plans, upgrading/downgrading plans, and displaying customer data in a tabular format.
 
@@ -10,7 +9,7 @@ This project is a web-based application to manage and track telecom mobility cus
 
 ## Project Structure
 Here's an overview of the project structure:
-```plaintext
+```
 project/
 ├── app/
 │   ├── __init__.py
