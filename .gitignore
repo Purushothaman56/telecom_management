@@ -39,3 +39,12 @@ backend/.pytest_cache
 backend/app/__pycache__/*
 backend/tests/__pycache__/*
 
+# Dependency directories
+frontend/node_modules/
+
+# Build directories
+build/
+
+# Production build artifacts
+dist/
+
